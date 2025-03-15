@@ -48,6 +48,6 @@ topic = st.text_input("Topic for tweet :")
 number = st.number_input("Enter a Number of tweets 1 to 10 :", min_value = 1, max_value = 10, value = 1, step = 1)
 
 if st.button("Generate"):
-    tweets = tweet_chain.invoke({"number" : number, "topic" : topic})
+    tweets = tweet_chain.invoke({"topic" : topic})
     st.write(tweets.content)
     
